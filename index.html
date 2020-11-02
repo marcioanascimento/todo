@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ToDo</title>
+        <link rel="shortcut icon" href="/img/todo.svg" type="image/x-icon">
+        <script src="https://kit.fontawesome.com/a04a71a8a5.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+        <script src="/script.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>
+            <section class="grid-container">
+                <div class="image-figura">
+                    <img class="figura" src="/img/figura.svg" alt="Imagem ToDo">
+                </div>
+                <div class="dados-container">
+                    <div class="img-logo">
+                        <img class="" src="/img/todologo.png" alt="Imagem ToDo Logotipo">
+                    </div>
+                    <div id="form-cadastro">
+                        <form id="form" action="" class="form-container"> 
+                            <label for="atividade">Digite a atividade</label><br/>
+                            <input id="atividade" class="line dados-input" type="text"><br/>
+
+                            <label for="responsavel">Responsável pela tarefa</label><br/>
+                            <input id="responsavel" class="line dados-input" type="text"><br/>
+    
+                            <label class="data-inicial" for="dataInicial">Data inicial</label>
+                            <label class="data-final" for="dataFinal">Data final</label><br/>
+
+                            <input id="dataInicial" class="input-inicial dados-input" type="date">                            
+                            <input id="dataFinal" class="input-final dados-input" type="date">
+    
+                            <div class="display-button">
+                                <button type="button" class="button-save" 
+                                    onclick="adicionarTarefa(atividade.value, responsavel.value, dataInicial.value, dataFinal.value)">
+                                    <i class="far fa-share-square"></i>
+                                    Salvar
+                                </button>
+                            
+                                <button type="button" class="button-modific" 
+                                    onclick="altAtividade(atividade.value, responsavel.value, dataInicial.value, dataFinal.value)">
+                                    <i class="fas fa-exchange-alt"></i>
+                                    Alterar
+                                </button>
+                            
+                                <button type="button" class="button-delete" 
+                                    onclick="delRegistro()">
+                                    <i class="far fa-trash-alt"></i>
+                                    Excluir
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <table id="tabAtividade" class="tabela">
+                    <thead>
+                        <tr>
+                            <td class="tab">Código</td>
+                            <td class="tab">Atividade</td>
+                            <td class="tab">Responsável</td>
+                            <td class="tab">Data inicial</td>
+                            <td class="tab">Data final</td>
+                        </tr>
+                    </thead>
+                </table>
+            </section>            
+        </main>        
+    </body>
+</html>
